@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab 1</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<div id="myDiv">Hello, World!</div>
+<button id="myButton">Click Me</button>
+<div id="myElement" style="display: none;">This will fade in</div>
+
+<script>
+$(document).ready(function(){
+  var myElement = $("#myDiv");
+  myElement.text("Hello, jQuery!");
+
+  $("#myButton").click(function() {
+    alert("Button Clicked");
+  });
+
+  $(window).resize(function() {
+    console.log("Window Resized");
+  });
+
+  $("#myElement").fadeIn(1000);
+});
+</script>
+
+</body>
+</html>
